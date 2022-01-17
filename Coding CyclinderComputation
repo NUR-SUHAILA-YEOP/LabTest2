@@ -1,0 +1,35 @@
+package quiz2;
+import java.util.Scanner;
+class CyclinderComputation {
+
+	public static void main(String[] args) {
+		/* 1.2 Write a program called CylinderComputation that prompts user for the  
+		 * base radius and height of a cylinder in floating point number. 
+		 * The program shall read the inputs as double; compute the base area, surface area, and volume of the cylinder; 
+ 			print the values rounded to 2 decimal places. The formulas are:
+
+		
+*/
+		Scanner sc = new Scanner(System.in);
+		
+		double radius, height, baseArea, surfaceArea, volume;
+		
+		System.out.print("Please enter radius of cyclinder: ");
+		radius = sc.nextDouble();
+		
+		System.out.print("Please enter height of a circle: ");
+		height = sc.nextDouble();
+		
+		
+		//calculation
+		
+		baseArea = Math.PI * radius * radius;
+		surfaceArea = 2.0 * Math.PI * radius + 2.0 * baseArea;
+		volume = baseArea * height;
+		
+		System.out.printf("\nThe base area of cyclinder is : %.2f " , baseArea);
+		System.out.printf("\nThe surface area of cyclinder is : %.2f " , surfaceArea);
+		System.out.printf("\nThe base volume of cyclinder is : %.2f " , volume);
+	}
+
+}
